@@ -54,13 +54,13 @@ async def inline(event):
         await event.answer(
                 [],
                 switch_pm=f"@{me} ايدي او يوزر | الهمس مالتك",
-                switch_pm_param="Whisper"
+                switch_pm_param="start"
                 )
     except ValueError:
         await event.answer(
                 [],
                 switch_pm=f"راجع الشرح خاف ما تفهم!",
-                switch_pm_param="Whisper"
+                switch_pm_param="start"
                 )
     try:
         ui = await dion(us(user))
@@ -68,7 +68,7 @@ async def inline(event):
         await event.answer(
                 [],
                 switch_pm="اليوزر غلط ",
-                switch_pm_param="Whisper"
+                switch_pm_param="start"
                 )
         return
     db.update({"user_id": ui.user.id, "msg": msg, "gideon": event.sender.id})
@@ -79,7 +79,7 @@ __
     """
     deon = event.builder.article(
             title="ارسال همسه!",
-            description=f"اكو خلل راسل المطور",
+            description=f"اذا اكو خلل راسل المطور",
             url="https://t.me/MOA_YAD",
             text=dion_text,
             buttons=[
@@ -104,7 +104,7 @@ async def ws(event):
     msg = db["msg"]
     if msg == []:
         await event.anwswer(
-                "Oops!\nIt's looks like message got deleted from my server!", alert=True)
+                "اسف!\n الرساله صارت قديمة وحذفتها من السيرفر 🤝!", alert=True)
         return
     await event.answer(msg, alert=True)
 
