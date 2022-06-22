@@ -14,5 +14,5 @@ DION_TOKEN = os.environ.get("TOKEN", None) # Your token bot, get one from t.me/b
 
 # Config Text
 
-HELP_TEXT = f"**• طريقة استعمال بوت {DIONBOT_NAME}:**\n\nاضغط الزر في الاسفل أو\n\nاكتب __{BOT_USERNAME} همسه <يوزر المرسل له> | <النص>__\nمثال: `{BOT_USERNAME} همسه @MOA_YAD | مرحبا!`"
+HELP_TEXT = f"**• طريقة استعمال البوت:**\n\n اضغط على الزر او اكتب\n\n __{BOT_USERNAME} <الهمسه مالتك> | <يوزر/ايدي>__\nمثال: `{BOT_USERNAME} شلونك 😁 | @moa_yad!`"
 
