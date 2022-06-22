@@ -75,7 +75,7 @@ async def inline(event):
     dion_text = f"""
 الهمسه الا [{ui.user.first_name}](tg://user?id={ui.user.id})!
 اضغط على الزر علمود اتشوف الهمسه!\n
-**الهمسه من:** {ui.sender.id}!__
+__
     """
     deon = event.builder.article(
             title="ارسال همسه!",
