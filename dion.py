@@ -28,12 +28,6 @@ dion = TelegramClient(
                 )
 db = {}
 
-@dion.on(events.NewMessage(pattern="^[/]whisper$"))
-async def stsrt(event):
-    await event.reply(
-            START_TEXT)
-
-
 @dion.on(events.NewMessage(pattern="^[/]Whisper$"))
 async def helep(event):
     await event.reply(
