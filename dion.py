@@ -94,7 +94,7 @@ Click The Below Button To See The Message!\n
             )
     await event.answer(
             [deon],
-            switch_pm="Yahoo! A secret message.",
+            switch_pm="اضغط لاُرسال همسه.",
             switch_pm_param="start"
             )
 
@@ -105,7 +105,7 @@ async def ws(event):
     xflzu = [int(db["gideon"])]
     xflzu.append(user)
     if event.sender.id not in xflzu:
-        await event.answer("🔐 ولي هاي الهمسه مو الك 👞!", alert=True)
+        await event.answer("ولي هاي الهمسه مو الك 👞!", alert=True)
         return
     msg = db["msg"]
     if msg == []:
