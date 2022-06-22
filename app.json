@@ -1,6 +1,6 @@
 {
-      "name": "Dion WhisperBot",
-      "description": "A TelegramBot to send messages secretly, by github.com/SeorangDion",
+      "name": " WhisperBot",
+      "description": "A Telegram",
       "keywords": [
          "telegram",
          "advance",
@@ -9,21 +9,21 @@
          "SeorangDion"
       ],
     
-   "logo":    "https://telegra.ph/file/5854f7aacd6dd0a974717.jpg",  
-   "repository": "https://github.com/SeorangDion/WhisperBot",
+   "logo":    "https://telegra.ph/file/0c0d5c08751c5bb01d53b.jpg",  
+   "repository": "https://github.com/MOA-YAD/whisper_bot",
    "env": {
       "TOKEN": {
-         "description": "Your bot token, get one from @BotFather on Telegram.",
+         "description": "Your bot token, get one from? @MNWMH_BOT Telegram.",
          "required": true,
          "value": ""
       },
       "BOT_USERNAME": {
-         "description": "Username of your bot with @, example: `@WhisperXRobot`.",
-         "value": "@WhisperXRobot"
+         "description": "Username of your bot with @, example: `@MNWMH_BOT`.",
+         "value": "@MNWMH_BOT"
       },
       "BOT_NAME": {
          "description": "Name of your bot, example: `Whisper Bot`",
-         "value": "Whisper Bot"
+         "value": "بوت همسه"
       }
     },
     "buildpacks": [
