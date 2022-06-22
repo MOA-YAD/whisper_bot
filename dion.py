@@ -49,11 +49,11 @@ async def inline(event):
     me = (await dion.get_me()).username
     try:
         inp = event.text.split(None, 1)[1]
-        user, msg = inp.split(" ")
+        user, msg = inp.split(".")
     except IndexError:
         await event.answer(
                 [],
-                switch_pm=f"@{me} [ايدي او يوزر]|[الرساله]",
+                switch_pm=f"@{me} [ايدي او يوزر].[الرساله]",
                 switch_pm_param="start"
                 )
     except ValueError:
