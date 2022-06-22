@@ -28,13 +28,13 @@ dion = TelegramClient(
                 )
 db = {}
 
-@dion.on(events.NewMessage(pattern="^[!?/]start$"))
+@dion.on(events.NewMessage(pattern="^[]همسه$"))
 async def stsrt(event):
     await event.reply(
             START_TEXT)
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]help$"))
+@dion.on(events.NewMessage(pattern="^[]همسه$"))
 async def helep(event):
     await event.reply(
             HELP_TEXT,
@@ -59,7 +59,7 @@ async def inline(event):
     except IndexError:
         await event.answer(
                 [],
-                switch_pm=f"@{me} [UserID]|[Message]",
+                switch_pm=f"@{me} [ايدي او يوزر]|[الرساله]",
                 switch_pm_param="start"
                 )
     except ValueError:
@@ -73,7 +73,7 @@ async def inline(event):
     except BaseException:
         await event.answer(
                 [],
-                switch_pm="Invalid User ID/Username",
+                switch_pm="اليوزر غلط ",
                 switch_pm_param="start"
                 )
         return
@@ -84,9 +84,9 @@ Click The Below Button To See The Message!\n
 **Note:** __Only {ui.user.first_name} can open this!__
     """
     deon = event.builder.article(
-            title="Send your secret message!",
-            description=f"Powered by {DIONBOT_NAME}",
-            url="https://t.me/DionProjects",
+            title="ارسال همسه!",
+            description=f"في خلل راسل المطور",
+            url="https://t.me/MOA_YAD",
             text=dion_text,
             buttons=[
                 [Button.inline(" اضهار الهمسه 🔓 ", data="")]
@@ -99,7 +99,7 @@ Click The Below Button To See The Message!\n
             )
 
 
-@dion.on(events.CallbackQuery(data="همسه"))
+@dion.on(events.CallbackQuery(data=""))
 async def ws(event):
     user = int(db["user_id"])
     xflzu = [int(db["gideon"])]
