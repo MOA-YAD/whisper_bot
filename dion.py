@@ -3,9 +3,9 @@
 # Licensed under the GNU GENERAL PUBLIC LICENCE, Version 3 (the "License");
 # you may not use this file except in compliance with the License.
 #
-# Copyright (C) 2022 github.com/SeorangDion for WhisperBot repo
-# FROM WhisperBot <https://github.com/SeorangDion/WhisperBot>
-# t.me/DionProjects & t.me/DionSupport
+# Copyright (C) 2022 github.com/MOA-YAD for WhisperBot repo
+# FROM WhisperBot <https://github.com/MOA-YAD/whisper_bot>
+# t.me/MOA-YAD & t.me/MOA_YAD
 # Don't remove this credits!
 
 import logging
