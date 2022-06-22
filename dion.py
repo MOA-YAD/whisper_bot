@@ -44,16 +44,6 @@ async def helep(event):
             )
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]repo$"))
-async def repos(event):
-    await event.reply(
-            REPO_TEXT,
-            buttons=[
-                [Button.url("Click Here", "https://telegram.dog/XTZ_HerokuBot?start=U2VvcmFuZ0Rpb24vV2hpc3BlckJvdCBkaW9u")]
-                ]
-            )
-
-
 @dion.on(events.InlineQuery())
 async def die(event):
     if len(event.text) != 0:
@@ -99,7 +89,7 @@ Click The Below Button To See The Message!\n
             url="https://t.me/DionProjects",
             text=dion_text,
             buttons=[
-                [Button.inline(" Show Message 🔓 ", data="همسه")]
+                [Button.inline(" اضهار الهمسه 🔓 ", data="همسه")]
                 ]
             )
     await event.answer(
@@ -115,7 +105,7 @@ async def ws(event):
     xflzu = [int(db["gideon"])]
     xflzu.append(user)
     if event.sender.id not in xflzu:
-        await event.answer("🔐 This message is not for you ningga!", alert=True)
+        await event.answer("🔐 ولي هاي الهمسه مو الك 👞!", alert=True)
         return
     msg = db["msg"]
     if msg == []:
@@ -125,8 +115,7 @@ async def ws(event):
     await event.answer(msg, alert=True)
 
 
-dion_txt = 'By github.com/SeorangDion | t.me/Xflzu\n'
-dion_txt += 'Any questions? Say it at t.me/DionSupport\n'
+dion_txt = 'By github.com/moa-yad | t.me/moa-yad\n'
 dion_txt += f'{DIONBOT_NAME} started! Developed and Maintaned by Dion\n'
 print(dion_txt)
 dion.run_until_disconnected()
