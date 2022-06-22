@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 dion = TelegramClient(
-        "whisper",
+        "",
         api_id=DIONAPI_KEY,
         api_hash=DIONAPI_HASH
         ).start(
@@ -39,7 +39,7 @@ async def helep(event):
     await event.reply(
             HELP_TEXT,
             buttons=[
-                [Button.switch_inline("Go Inline", query="")]
+                [Button.switch_inline("ارسال همسه", query="")]
                 ]
             )
 
