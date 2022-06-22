@@ -73,9 +73,9 @@ async def inline(event):
         return
     db.update({"user_id": ui.user.id, "msg": msg, "gideon": event.sender.id})
     dion_text = f"""
-A Whisper Has Been Sent To [{ui.user.first_name}](tg://user?id={ui.user.id})!
-Click The Below Button To See The Message!\n
-**Note:** __Only {ui.user.first_name} can open this!__
+الهمسه الا [{ui.user.first_name}](tg://user?id={ui.user.id})!
+اضغط على الزر علمود اتشوف الهمسه!\n
+**ملاحضه:** __فقط {ui.user.first_name} يكدر يفتح الهمسه!__
     """
     deon = event.builder.article(
             title="ارسال همسه!",
