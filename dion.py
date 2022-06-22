@@ -49,18 +49,18 @@ async def inline(event):
     me = (await dion.get_me()).username
     try:
         inp = event.text.split(None, 1)[1]
-        msg, user = inp.split("|")
+        msg,user = inp.split("|")
     except IndexError:
         await event.answer(
                 [],
-                switch_pm=f"@{me} [ايدي او يوزر]|[الرساله]",
-                switch_pm_param="start"
+                switch_pm=f"@{me} ايدي او يوزر | الهمس مالتك",
+                switch_pm_param="Whisper"
                 )
     except ValueError:
         await event.answer(
                 [],
-                switch_pm=f"Give a message too!",
-                switch_pm_param="start"
+                switch_pm=f"راجع الشرح خاف ما تفهم!",
+                switch_pm_param="Whisper"
                 )
     try:
         ui = await dion(us(user))
@@ -68,27 +68,27 @@ async def inline(event):
         await event.answer(
                 [],
                 switch_pm="اليوزر غلط ",
-                switch_pm_param="start"
+                switch_pm_param="Whisper"
                 )
         return
     db.update({"user_id": ui.user.id, "msg": msg, "gideon": event.sender.id})
     dion_text = f"""
 الهمسه الا [{ui.user.first_name}](tg://user?id={ui.user.id})!
 اضغط على الزر علمود اتشوف الهمسه!\n
-**ملاحضه:** __فقط {ui.user.first_name} يكدر يفتح الهمسه!__
+**الهمسه من:** {ui.sender.id}!__
     """
     deon = event.builder.article(
             title="ارسال همسه!",
-            description=f"في خلل راسل المطور",
+            description=f"اكو خلل راسل المطور",
             url="https://t.me/MOA_YAD",
             text=dion_text,
             buttons=[
-                [Button.inline(" اضهار الهمسه 🔓 ", data="")]
+                [Button.inline(" 🔒 اضهار الهمسه 🔓 ", data="")]
                 ]
             )
     await event.answer(
             [deon],
-            switch_pm="اضغط لاُرسال همسه.",
+            switch_pm="📵 اضغط لاُرسال همسه.📵",
             switch_pm_param="start"
             )
 
