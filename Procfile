@@ -1,6 +1,6 @@
 # Copyright (C) 2022 @SeorangDion for WhisperBot repo
-# FROM WhisperBot <https://github.com/SeorangDion/WhisperBot>
-# t.me/DionProjects & t.me/DionSupport
+# FROM WhisperBot <https://github.com/MOA-YAD/whisper_bot/tree/main>
+# t.me/DionProjects & t.me/MOA_YAD
 # Don't remove this credits!
 
 worker: bash deon
