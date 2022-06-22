@@ -39,7 +39,7 @@ async def helep(event):
     await event.reply(
             HELP_TEXT,
             buttons=[
-                [Button.switch_inline("Go Inline", query="همسه")]
+                [Button.switch_inline("Go Inline", query="")]
                 ]
             )
 
@@ -50,7 +50,7 @@ async def die(event):
         return
     me = (await dion.get_me()).username
 
-@dion.on(events.InlineQuery(pattern="همسه"))
+@dion.on(events.InlineQuery(pattern=""))
 async def inline(event):
     me = (await dion.get_me()).username
     try:
@@ -89,7 +89,7 @@ Click The Below Button To See The Message!\n
             url="https://t.me/DionProjects",
             text=dion_text,
             buttons=[
-                [Button.inline(" اضهار الهمسه 🔓 ", data="همسه")]
+                [Button.inline(" اضهار الهمسه 🔓 ", data="")]
                 ]
             )
     await event.answer(
